@@ -3,104 +3,139 @@
 <head>
     <meta charset="UTF-8">
         <title>Home</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-          
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    
-<nav class='navbar navbar-inverse navbar-fixed-top'>
-    <div class='container-fluid'>
-        <div class='navbar-header'>
-            <a class='navbar-brand' href='index.html'>Christopher Centenera</a>
-        </div>
-
-        <!-- Nav bar starting from left side. -->
-        <ul class='nav navbar-nav'>
-            <li class='active'><a href='projects.html'>Projects</a>
-            <li><a href='resume.html'>Resume</a>
-            <li><a href='https://github.com/ChristopherCentenera'>GitHub</a>
-        </ul>
+<nav class='navbar navbar-expand-sm bg-dark navbar-dark fixed-top'>
+    <a class='navbar-brand' href='index.html'>Christopher Centenera</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class='navbar-nav'>
+        <li class="nav-item active"><a class="nav-link" href='projects.html'>Projects</a>
+        <li class="nav-item"><a class="nav-link" href='resume.html'>Resume</a>
+        <li class="nav-item"><a class="nav-link" href='https://github.com/ChristopherCentenera'>GitHub</a>
+    </ul>
     </div>
 </nav>
-<div class='jumbotron'>
-    <div class='container text-center'>
-        <h1>Projects</h1>
-        <p>Here are some projects I've work on in the past.</p>
-    </div>
-    <div id='search' style='width:60%; margin:auto;'>
-        <input class='form-control' id='searchInput' type='text' placeholder='search for a name or a tag such as node, html, etc.'>
-    </div>
+<div class='wrapper'>
+    
 
-</div>
-<div class='container'>
-        <div id='projects'>
-        <div class='container-fluid bg-3 text-center'>
-            <h3>Websites</h3>
-            <div class='row'>
-                <div class='col-sm-3'>
-                    <p>Face the Shapes</p>
-                    <img src='' class='' style='width:100%' alt=''>
-                </div>
-                <div class='col-sm-3'>
-                    <p>Punch In Time</p>
-                    <img src='' class='' style='width:100%' alt=''>
-                </div>
-                <div class='col-sm-3'>
-                    <p></p>
-                    <img src='' class='' style='width:100%' alt=''>
-                 </div>
-                 <div class='col-sm-3'>
-                    <p>Personal Blog</p>
-                    <img src='' class='' style='width:100%' alt=''>
-                </div>
-            </div>
+    <div class='jumbotron'>
+        <div class='container text-center'>
+            <h1>Projects</h1>
+            <p>Here are some projects I've work on in the past.</p>
         </div>
-        <br>
-        <div class='container-fluid bg-3 text-center'>
-            <h3>Other Projects</h3>
-            <div class='row'>
-                <div class='col-sm-6'>
-                    <p>NHL Stats Bot for Discord</p>
-                    <div class='card'>
-                        <img class='card-img-top' src='https://i.imgur.com/DvzDjpR.png' alt='NHL Stats Bot'>
-                        <div class='card-body'>
-                            <h4 class='card-title'>NHL Stats Discord Bot</h4>
-                            <p class='card-text'>Get stats of your favourite players or teams all through Discord!</p>
-                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+        <div id='search' style='width:60%; margin:auto;'>
+            <input class='form-control' id='searchInput' type='text' placeholder='search for a name or a tag such as node, html, etc.'>
+        </div>
+
+    </div>
+    <div class='container main'>
+            <div id='projects'>
+            <div class='container-fluid bg-3 text-center'>
+                <h3>Websites</h3>
+                <div class='row'>
+                    <div class='col-sm-3 d-sm-flex'>
+                        <div class='card'>
+                            <img class='card-img-top' src='./img/punch_in_logo.png' alt='NHL Stats Bot'>
+                            <div class='card-body flex-fill'>
+                                <h4 class='card-title'>Fit In Time</h4>
+                                <p class='card-text'>A website I made with my friends in our first year at BCIT</p>
+                            </div>
+                            <a href='./img/punch_in_logo.png' class='btn btn-lg btn-primary to-bottom card-btn'>See GitHub</a>
+                        </div>
+                    </div>
+                    <div class='col-sm-3 d-sm-flex'>                        
+                        <div class='card'>
+                        <img class='card-img-top' src='./img/punch_in_logo.png' alt='Punch In Logo'>
+                        <div class='card-body flex-fill'>
+                            <h4 class='card-title'>Test</h4>
+                            <p class='card-text'>Testing</p>
+                        </div>
+                        <a href='./img/punch_in_logo.png' class='btn btn-lg btn-primary to-bottom card-btn'>See GitHub</a>
+                    </div>
+                    </div>
+                    <div class='col-sm-3 d-sm-flex'>
+                        <div class='card'>
+                            <img class='card-img-top' src='./img/punch_in_logo.png' alt='Punch In Logo'>
+                            <div class='card-body flex-fill'>
+                                <h4 class='card-title'>Punch In Time</h4>
+                                <p class='card-text'>A project management system done by my group during our time at BCIT</p>
+                            </div>
+                            <a href='./img/punch_in_logo.png' class='btn btn-lg btn-primary to-bottom card-btn'>See GitHub</a>
+                        </div>
+                    </div>
+                    <div class='col-sm-3 d-flex'>
+                        <div class='card'>
+                            <img class='card-img-top' src='./img/punch_in_logo.png' alt='NHL Stats Bot'>
+                            <div class='card-body flex-fill'>
+                                <h4 class='card-title'>My blog</h4>
+                                <p class='card-text'>See whats going on in my life.</p>
+                            </div>
+                            <a href='#' class='btn btn-lg  btn-primary to-bottom card-btn'>See Website</a>
                         </div>
                     </div>
                 </div>
-                <div class='col-sm-6'>
-                    <p>Minecraft Server Control bot for Discord</p>
-                    <div class='card'>
-                        <img class='card-img-top' src='' alt='NHL Stats Bot'>
-                        <div class='card-body'>
-                            <h4 class='card-title'>Minecraft Server Control Bot</h4>
-                            <p class='card-text'>Start and stop your minecraft server through discord! Also allows you to see if the server is currently up and who is online.</p>
-                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+            </div>
+            <br>
+            <div class='container-fluid bg-3 text-center'>
+                <h3>Other Projects</h3>
+                <div class='row'>
+                    <div class='col-sm-3 d-flex'>
+                        <div class='card'>
+                            <img class='card-img-top' src='https://i.imgur.com/DvzDjpR.png' alt='NHL Stats Bot'>
+                            <div class='card-body flex-fill'>
+                                <h4 class='card-title'>NHL Stats Discord Bot</h4>
+                                <p class='card-text'>Get stats of your favourite players or teams all through Discord!</p>
+                            </div>
+                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-lg btn-primary to-bottom card-btn'>See GitHub</a>
+                        </div>
+                    </div>
+                    <div class='col-sm-3 d-flex'>
+                        <div class='card'>
+                            <img class='card-img-top' src='https://i.imgur.com/DvzDjpR.png' alt='NHL Stats Bot'>
+                            <div class='card-body flex-fill'>
+                                <h4 class='card-title'>Minecraft Server Control Bot</h4>
+                                <p class='card-text'>Start and stop your minecraft server through discord! Also allows you to see if the server is currently up and who is online.</p>
+                            </div>
+                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-lg btn-primary to-bottom card-btn'>See GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script>
-$(document).ready(function(){
-    $('#searchInput').on('keyup',function() {
-        let value = $('#searchInput').val().toLowerCase();
-        $('#projects .card').hide();
-        $('#projects .card').each(function() {
-            if($(this).text().toLowerCase().indexOf(""+value+"") != -1) {
-                $(this).closest('.card').show();
-            }
+    
+    <script>
+    $(document).ready(function(){
+        $('#searchInput').on('keyup',function() {
+            let value = $('#searchInput').val().toLowerCase();
+            console.log('searching for: ' + $('#searchInput').val().toLowerCase());
+            //$('#projects .card').parent().hide();
+            $('#projects .card').parent().attr('class', 'col-sm-3 d-sm-none hidden');
+            $('#projects .card').each(function() {
+                if($(this).text().toLowerCase().indexOf(""+value+"") != -1) {
+                    //$(this).closest('.card').parent().show();
+                    $(this).closest('.card').parent().attr('class','col-sm-3 d-sm-flex');
+                }
+            });
         });
     });
-});
-</script>
+    </script>
+    
+    <footer class="bg-dark footer">
+        <div class="container text-center">
+            <small>Copyright &copy; Christopher Centenera</small>
+        </div>  
+    </footer>
+</div>
+
 </body>
 </html>
