@@ -31,13 +31,13 @@
         <h1>Projects</h1>
         <p>Here are some projects I've work on in the past.</p>
     </div>
+    <div id='search' style='width:60%; margin:auto;'>
+        <input class='form-control' id='searchInput' type='text' placeholder='search for a name or a tag such as node, html, etc.'>
+    </div>
+
 </div>
 <div class='container'>
-    <div id='search'>
-        <input class='form-control' id='searchInput' type='text' placeholder='search...'>
-        <button id='searchFilter' type='submit' class='btn btn-default btn-sm'><span class="glyphicon glyphicon-search"></span> Search</button>
-    </div>
-    <div id='projects'>
+        <div id='projects'>
         <div class='container-fluid bg-3 text-center'>
             <h3>Websites</h3>
             <div class='row'>
@@ -91,10 +91,10 @@
 </div>
 <script>
 $(document).ready(function(){
-    $('#searchFilter').click(function() {
+    $('#searchFilter').on('keyup',function() {
         let value = $('#searchInput').val().toLowerCase();
         $('#projects *').filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            $(this).toggle($(this).is(':not(:contains(' + value + '))');
         });
     });
 });
