@@ -93,8 +93,11 @@
 $(document).ready(function(){
     $('#searchFilter').on('keyup',function() {
         let value = $('#searchInput').val().toLowerCase();
-        $('#projects *').filter(function() {
-            $(this ':not(:contains(' + value + '))').hide();
+        $('#projects .card').hide();
+        $('#projects .card').each(function() {
+            if($(this).text().toLowerCase().indexOf(""+value+"") != -1) {
+                $(this).closest('.card').show();
+            }
         });
     });
 });
