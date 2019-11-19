@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
         <title>Home</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+          
 </head>
 
 <body>
@@ -28,56 +32,70 @@
         <p>Here are some projects I've work on in the past.</p>
     </div>
 </div>
-
-<div class='container-fluid bg-3 text-center'>
-    <h3>Websites</h3>
-    <div class='row'>
-        <div class='col-sm-3'>
-            <p>Face the Shapes</p>
-            <img src='' class='' style='width:100%' alt=''>
-        </div>
-        <div class='col-sm-3'>
-            <p>Punch In Time</p>
-            <img src='' class='' style='width:100%' alt=''>
-        </div>
-        <div class='col-sm-3'>
-            <p></p>
-            <img src='' class='' style='width:100%' alt=''>
-         </div>
-         <div class='col-sm-3'>
-            <p>Personal Blog</p>
-            <img src='' class='' style='width:100%' alt=''>
-        </div>
-    </div>
-</div>
-<br>
-<div class='container-fluid bg-3 text-center'>
-    <h3>Other Projects</h3>
-    <div class='row'>
-        <div class='col-sm-6'>
-            <p>NHL Stats Bot for Discord</p>
-            <div class='card'>
-                <img class='card-img-top' src='' alt='NHL Stats Bot'>
-                <div class='card-body'>
-                    <h4 class='card-title'>NHL Stats Discord Bot</h4>
-                    <p class='card-text'>Get stats of your favourite players or teams all through Discord!</p>
-                    <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+<div class='container'>
+    <input class='form-control' id='searchInput' type='text' placeholder='search...'>
+    <button id='searchFilter' type='submit' class='btn btn-primary mb-2'>
+    <div id='projects'>
+        <div class='container-fluid bg-3 text-center'>
+            <h3>Websites</h3>
+            <div class='row'>
+                <div class='col-sm-3'>
+                    <p>Face the Shapes</p>
+                    <img src='' class='' style='width:100%' alt=''>
+                </div>
+                <div class='col-sm-3'>
+                    <p>Punch In Time</p>
+                    <img src='' class='' style='width:100%' alt=''>
+                </div>
+                <div class='col-sm-3'>
+                    <p></p>
+                    <img src='' class='' style='width:100%' alt=''>
+                 </div>
+                 <div class='col-sm-3'>
+                    <p>Personal Blog</p>
+                    <img src='' class='' style='width:100%' alt=''>
                 </div>
             </div>
         </div>
-        <div class='col-sm-6'>
-            <p>Minecraft Server Control bot for Discord</p>
-            <div class='card'>
-                <img class='card-img-top' src='' alt='NHL Stats Bot'>
-                <div class='card-body'>
-                    <h4 class='card-title'>Minecraft Server Control Bot</h4>
-                    <p class='card-text'>Start and stop your minecraft server through discord! Also allows you to see if the server is currently up and who is online.</p>
-                    <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+        <br>
+        <div class='container-fluid bg-3 text-center'>
+            <h3>Other Projects</h3>
+            <div class='row'>
+                <div class='col-sm-6'>
+                    <p>NHL Stats Bot for Discord</p>
+                    <div class='card'>
+                        <img class='card-img-top' src='' alt='NHL Stats Bot'>
+                        <div class='card-body'>
+                            <h4 class='card-title'>NHL Stats Discord Bot</h4>
+                            <p class='card-text'>Get stats of your favourite players or teams all through Discord!</p>
+                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-sm-6'>
+                    <p>Minecraft Server Control bot for Discord</p>
+                    <div class='card'>
+                        <img class='card-img-top' src='' alt='NHL Stats Bot'>
+                        <div class='card-body'>
+                            <h4 class='card-title'>Minecraft Server Control Bot</h4>
+                            <p class='card-text'>Start and stop your minecraft server through discord! Also allows you to see if the server is currently up and who is online.</p>
+                            <a href='https://github.com/ChristopherCentenera/nhl_stats_bot' class='btn btn-primary'>See GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script>
+$(document).ready(function(){
+    $('#searchFilter').click(function() {
+        let value = $('#searchInput').val().toLowerCase();
+        $('#projects *').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+});
+</script>
 </body>
 </html>
