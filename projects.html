@@ -94,7 +94,7 @@ $(document).ready(function(){
     $('#searchFilter').on('keyup',function() {
         let value = $('#searchInput').val().toLowerCase();
         $('#projects *').filter(function() {
-            $(this).toggle($(this).is(':not(:contains(' + value + '))');
+            $(this ':not(:contains(' + value + '))').hide();
         });
     });
 });
